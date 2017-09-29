@@ -3,5 +3,5 @@ output "zone_id" {
 }
 
 output "nameservers" {
-  value = "${aws_route53_zone.private.name_servers}"
+  value = "${join(",", aws_route53_zone.private.name_servers)}"
 }
